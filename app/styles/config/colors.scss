@@ -1,0 +1,13 @@
+$background: #1d1d1d;
+$hyper-purple: #f2199c;
+$hyper-green: #01f8c1;
+$hyper-thunder: #3ceefc;
+
+@keyframes pulse {
+    from {
+        transform: scale(0.3);
+    }
+    to {
+        transform: scale(0.5);
+    }
+  }

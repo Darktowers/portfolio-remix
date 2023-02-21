@@ -1,0 +1,10 @@
+@keyframes pulse {
+  from {
+    transform: scale(0.3);
+  }
+  to {
+    transform: scale(0.5);
+  }
+}
+
+/*# sourceMappingURL=colors.css.map */

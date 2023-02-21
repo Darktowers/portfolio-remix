@@ -1,0 +1,140 @@
+@keyframes pulse {
+  from {
+    transform: scale(0.3);
+  }
+  to {
+    transform: scale(0.5);
+  }
+}
+.menuAdjust {
+  display: flex;
+}
+
+.menu {
+  position: fixed;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+  top: 0;
+  max-width: 200px;
+  width: 100%;
+  animation: 0.3s move linear;
+}
+@media screen and (max-width: 768px) {
+  .menu {
+    max-width: 100%;
+    justify-content: center;
+    animation: none;
+    height: 100px;
+    bottom: 0 !important;
+    top: inherit;
+  }
+}
+@keyframes move {
+  from {
+    transform: translateX(-150px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.menu-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 1em;
+}
+@keyframes moveYS {
+  from {
+    transform: translateY(350px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu-main {
+    flex-direction: row;
+    animation: 0.3s moveYS linear;
+    padding: 1em;
+    align-items: flex-end;
+  }
+}
+.menu-main-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+  outline: none;
+  cursor: pointer;
+  font-size: 0.8em;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  color: #4a4a4a;
+}
+.menu-main-item:last-child {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .menu-main-item {
+    margin-bottom: 0;
+    font-size: 1em;
+    flex-direction: column;
+    margin-right: 1em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu-main-item .text {
+    display: none;
+  }
+}
+.menu-main-item-ani {
+  width: 0;
+  height: 0;
+  transform: scale(0);
+  transition: all 0.3s ease-in-out;
+}
+.menu-main-item:hover {
+  color: #01f8c1;
+}
+.menu-main-item.active {
+  font-size: 1em;
+  color: #01f8c1;
+}
+.menu-main-item.active .menu-main-item-ani {
+  background: #f2199c;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  transform: scale(0.4);
+  animation-duration: 1s;
+  animation-name: pulse;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.menu-main-item.active i {
+  color: #f2199c;
+  font-size: 2em;
+}
+.menu-main-item i {
+  font-size: 1.8em;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  margin-right: 0.3em;
+}
+@media screen and (max-width: 768px) {
+  .menu-main-item i {
+    margin-right: 0;
+  }
+}
+.menu-main-item i svg {
+  width: 32px;
+  height: 32px;
+}
+
+/*# sourceMappingURL=index.css.map */

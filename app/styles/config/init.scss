@@ -1,0 +1,128 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import "normalize.scss";
+@import "colors.scss";
+
+html {
+    overflow: overlay;
+}
+
+body {
+    background: $background;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+}
+
+app-home,
+app-about {
+    width: 100%;
+    margin-left: 150px;
+
+    @media screen and (max-width: 768px) {
+        margin-left: 0;
+    }
+}
+
+@function multiple-box-shadow ($n) {
+    $value: '#{random(2000)}px #{random(2000)}px #FFF';
+
+    @for $i from 2 through $n {
+        $value: '#{$value} , #{random(2000)}px #{random(2000)}px #{$hyper-thunder}';
+    }
+
+    @return unquote($value);
+}
+
+
+$shadows-small: multiple-box-shadow(1000);
+$shadows-medium: multiple-box-shadow(300);
+$shadows-big: multiple-box-shadow(100);
+
+#stars {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    box-shadow: $shadows-small;
+    animation: animStar 200s linear infinite;
+
+    &:after {
+        content: " ";
+        position: absolute;
+        top: 2000px;
+        right: -500px;
+        width: 1px;
+        height: 1px;
+        background: transparent;
+        box-shadow: $shadows-small;
+    }
+
+}
+
+
+
+.starContainer {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+#stars2 {
+    width: 2px;
+    height: 2px;
+    background: transparent;
+    box-shadow: $shadows-medium;
+    animation: animStar 150s linear infinite;
+
+    &:after {
+        content: " ";
+        position: absolute;
+        top: 2500px;
+        width: 2px;
+        height: 2px;
+        background: transparent;
+        box-shadow: $shadows-medium;
+    }
+}
+
+#stars3 {
+    width: 3px;
+    height: 3px;
+    background: transparent;
+    box-shadow: $shadows-big;
+    animation: animStar 100s linear infinite;
+
+    &:after {
+        content: " ";
+        position: absolute;
+        top: 2000px;
+        width: 3px;
+        height: 3px;
+        background: transparent;
+        box-shadow: $shadows-big;
+    }
+}
+
+@keyframes animStar {
+    from {
+        transform: translate(0px, -2000px);
+    }
+
+    to {
+        transform: translate(-2000px, 0px);
+    }
+
+}
+
+main {
+    z-index: 1;
+    position: relative;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}

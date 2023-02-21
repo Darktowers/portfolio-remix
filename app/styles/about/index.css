@@ -1,0 +1,207 @@
+@keyframes pulse {
+  from {
+    transform: scale(0.3);
+  }
+  to {
+    transform: scale(0.5);
+  }
+}
+.about-content {
+  width: 100%;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@media screen and (max-height: 640px) {
+  .about-container {
+    min-height: 100vh;
+    align-items: flex-start;
+    margin: 0 auto;
+  }
+}
+.about-container-who {
+  max-width: 750px;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .about-container-who {
+    max-width: 450px;
+  }
+}
+.about-container-who-profile {
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+  transform: translateY(0px);
+  padding: 2em;
+  border-radius: 8px;
+  position: relative;
+  background: #1d1d1d;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 1em;
+}
+.about-container-who-profile .profile {
+  width: 40%;
+}
+@media screen and (max-width: 768px) {
+  .about-container-who-profile .profile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.about-container-who-profile .profile .social-media {
+  max-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+@media screen and (max-width: 768px) {
+  .about-container-who-profile .profile .social-media {
+    margin-bottom: 1em;
+  }
+}
+@media screen and (max-width: 450px) {
+  .about-container-who-profile .profile .social-media {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+.about-container-who-profile .profile .social-media a {
+  font-size: 1.5em;
+  margin-right: 0.5em;
+  color: #3ceefc;
+}
+.about-container-who-profile .profile .social-media a:last-child {
+  margin-right: 0;
+}
+.about-container-who-profile-face {
+  overflow: hidden;
+  border-radius: 50%;
+  max-width: 200px;
+  width: 100%;
+  position: relative;
+  height: 200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-container-who-profile-face img {
+  transform: translate(10px, 32px);
+}
+.about-container-who-profile-content {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .about-container-who-profile-content {
+    width: 100%;
+  }
+}
+.about-container-who-profile-content h1 {
+  font-size: 40px;
+  color: white;
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 450px) {
+  .about-container-who-profile-content h1 {
+    font-size: 28px;
+  }
+}
+.about-container-who-profile-content h3 {
+  color: #01f8c1;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+@media screen and (max-width: 450px) {
+  .about-container-who-profile-content h3 {
+    font-size: 16px;
+  }
+}
+.about-container-who-profile-content h3 i {
+  color: #f2199c;
+}
+.about-container-who-profile-content p {
+  color: white;
+  text-align: justify;
+  margin-top: 1em;
+}
+@media screen and (max-height: 650px) {
+  .about-container-who-profile-content p {
+    height: 100px;
+    overflow: overlay;
+    margin-top: 0.5em;
+  }
+}
+.about-container-image {
+  max-width: 600px;
+  width: 100%;
+}
+.about-container-image .cube-unit {
+  fill-opacity: 0.9;
+  stroke-miterlimit: 0;
+}
+.about-container-image .m-left,
+.about-container-image .m-right {
+  animation: 2s moveX alternate infinite paused;
+}
+.about-container-image .m-up,
+.about-container-image .m-down {
+  animation: 2s moveY alternate infinite paused;
+}
+.about-container-image .m-left {
+  --translate: -50px;
+}
+.about-container-image .m-right {
+  --translate: 50px;
+}
+.about-container-image .m-down {
+  --translate: 50px;
+}
+.about-container-image .m-up {
+  --translate: -50px;
+}
+.about-container-image svg:hover * {
+  animation-play-state: running;
+}
+@keyframes floatAbout {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+@keyframes moveX {
+  to {
+    transform: translateX(var(--translate, 35px));
+  }
+}
+@keyframes moveY {
+  to {
+    transform: translateY(var(--translate, -35px));
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

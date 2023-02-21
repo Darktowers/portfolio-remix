@@ -1,0 +1,110 @@
+@keyframes pulse {
+  from {
+    transform: scale(0.3);
+  }
+  to {
+    transform: scale(0.5);
+  }
+}
+.home .animateName {
+  display: inline-block;
+}
+.home-content {
+  width: 100%;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 1em;
+  width: 100%;
+}
+.home-container-who h1 {
+  font-size: 60px;
+  color: white;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0;
+}
+@media screen and (max-width: 768px) {
+  .home-container-who h1 {
+    font-size: 40px;
+  }
+}
+.home-container-who p {
+  color: #01f8c1;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 768px) {
+  .home-container-who p {
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+}
+.home-container-who p i {
+  color: #f2199c;
+}
+.home-container-image {
+  max-width: 600px;
+  width: 100%;
+}
+.home-container-image .cube {
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+}
+.home-container-image .cube-unit {
+  fill-opacity: 0.9;
+  stroke-miterlimit: 0;
+}
+.home-container-image .m-left,
+.home-container-image .m-right {
+  animation: 2s moveX alternate infinite paused;
+}
+.home-container-image .m-up,
+.home-container-image .m-down {
+  animation: 2s moveY alternate infinite paused;
+}
+.home-container-image .m-left {
+  --translate: -50px;
+}
+.home-container-image .m-right {
+  --translate: 50px;
+}
+.home-container-image .m-down {
+  --translate: 50px;
+}
+.home-container-image .m-up {
+  --translate: -50px;
+}
+.home-container-image svg:hover * {
+  animation-play-state: running;
+}
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+@keyframes moveX {
+  to {
+    transform: translateX(var(--translate, 35px));
+  }
+}
+@keyframes moveY {
+  to {
+    transform: translateY(var(--translate, -35px));
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

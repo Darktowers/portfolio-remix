@@ -1,0 +1,124 @@
+@import "../config/colors.scss";
+
+.home {
+    .animateName {
+        display: inline-block;
+    }
+
+    &-content {
+        width: 100%;
+        display: flex;
+        align-self: center;
+        justify-content: center;
+    }
+
+    &-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 1em;
+        width: 100%;
+        
+        &-who {
+            h1 {
+                font-size: 60px;
+                color: white;
+                line-height: 1.2;
+                letter-spacing: 1px;
+                font-weight: 400;
+                margin: 0;
+                
+                @media screen and (max-width: 768px) {
+                    font-size: 40px;
+                }
+            }
+
+            p {
+                color: $hyper-green;
+                font-size: 18px;
+                letter-spacing: 2px;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 16px;
+                    letter-spacing: 1px;
+                }
+
+                i {
+                    color: $hyper-purple;
+                }
+            }
+        }
+
+        &-image {
+            max-width: 600px;
+            width: 100%;
+
+            .cube {
+                transform: translatey(0px);
+                animation: float 6s ease-in-out infinite;
+            }
+
+            .cube-unit {
+                fill-opacity: .9;
+                stroke-miterlimit: 0;
+            }
+
+            .m-left,
+            .m-right {
+                animation: 2s moveX alternate infinite paused;
+            }
+
+            .m-up,
+            .m-down {
+                animation: 2s moveY alternate infinite paused;
+            }
+
+            .m-left {
+                --translate: -50px;
+            }
+
+            .m-right {
+                --translate: 50px;
+            }
+
+            .m-down {
+                --translate: 50px;
+            }
+
+            .m-up {
+                --translate: -50px;
+            }
+
+            svg:hover * {
+                animation-play-state: running;
+            }
+
+            @keyframes float {
+                0% {
+                    transform: translatey(0px);
+                }
+
+                50% {
+                    transform: translatey(-20px);
+                }
+
+                100% {
+                    transform: translatey(0px);
+                }
+            }
+
+            @keyframes moveX {
+                to {
+                    transform: translateX(var(--translate, 35px));
+                }
+            }
+
+            @keyframes moveY {
+                to {
+                    transform: translateY(var(--translate, -35px));
+                }
+            }
+        }
+    }
+}
