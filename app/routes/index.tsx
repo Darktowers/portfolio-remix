@@ -1,9 +1,17 @@
-import type { LinksFunction } from "@remix-run/node";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 
-import styles from "~/styles/home/index.css";
+import styles from "~/styles/pages/home/index.css";
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: styles }];
+};
+
+export const meta: MetaFunction = () => {
+  return {
+    title: "Welcome",
+    description:
+      "Hi, I'm Cristian software developer with more than 5 years of experience in web development",
+  };
 };
 
 export default function Index() {
@@ -12,8 +20,10 @@ export default function Index() {
       <div className="home-content hero is-fullheight">
         <div className="home-container">
           <div className="home-container-who">
-            <h1>Hi <br /> I'm Cristian <br /> Web Developer</h1>
-            <p>Full Stack Developer / Javascript Lover </p>
+            <h1>
+              Hi <br /> I'm Cristian <br /> Frontend Developer
+            </h1>
+            <p>React Developer / Javascript Lover </p>
           </div>
           <div className="home-container-image">
             <svg

@@ -1,0 +1,206 @@
+@import "../../config/colors.scss";
+
+.about {
+  &-content {
+    width: 100%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+  }
+
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    @media screen and (max-height: 640px) {
+      min-height: 100vh;
+      align-items: flex-start;
+      margin: 0 auto;
+    }
+    &-who {
+      max-width: 750px;
+      width: 100%;
+      @media screen and (max-width: 768px) {
+        max-width: 450px;
+      }
+      &-profile {
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        transform: translateY(0px);
+        padding: 2em;
+        border-radius: 8px;
+        position: relative;
+        background: #1d1d1d;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 1em;
+        .profile {
+          width: 40%;
+          @media screen and (max-width: 768px) {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          .social-media {
+            max-width: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            margin-top: 1em;
+            @media screen and (max-width: 768px) {
+              margin-bottom: 1em;
+            }
+            @media screen and (max-width: 450px) {
+              margin-bottom: 0;
+              margin-top: 0;
+            }
+            a {
+              font-size: 1.5em;
+              margin-right: 0.5em;
+              color: $hyper-thunder;
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+        &-face {
+          overflow: hidden;
+          border-radius: 50%;
+          max-width: 200px;
+          width: 100%;
+          position: relative;
+          height: 200px;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            transform: translate(10px, 32px);
+          }
+        }
+
+        &-content {
+          width: 60%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          @media screen and (max-width: 768px) {
+            width: 100%;
+          }
+
+          h1 {
+            font-size: 40px;
+            color: white;
+            line-height: 1.2;
+            margin: 0;
+            letter-spacing: 2px;
+
+            @media screen and (max-width: 450px) {
+              font-size: 28px;
+            }
+          }
+
+          h3 {
+            color: $hyper-green;
+            font-size: 16px;
+            letter-spacing: 2px;
+            margin: 0;
+
+            @media screen and (max-width: 450px) {
+              font-size: 16px;
+            }
+            i {
+              color: $hyper-purple;
+            }
+          }
+
+          p {
+            color: white;
+            text-align: justify;
+            margin-top: 1em;
+            @media screen and (max-height: 650px) {
+              height: 100px;
+              overflow: overlay;
+              margin-top: 0.5em;
+            }
+          }
+        }
+      }
+    }
+
+    &-image {
+      max-width: 600px;
+      width: 100%;
+
+      .cube-unit {
+        fill-opacity: 0.9;
+        stroke-miterlimit: 0;
+      }
+
+      .m-left,
+      .m-right {
+        animation: 2s moveX alternate infinite paused;
+      }
+
+      .m-up,
+      .m-down {
+        animation: 2s moveY alternate infinite paused;
+      }
+
+      .m-left {
+        --translate: -50px;
+      }
+
+      .m-right {
+        --translate: 50px;
+      }
+
+      .m-down {
+        --translate: 50px;
+      }
+
+      .m-up {
+        --translate: -50px;
+      }
+
+      svg:hover * {
+        animation-play-state: running;
+      }
+
+      @keyframes floatAbout {
+        0% {
+          box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+          transform: translatey(0px);
+        }
+
+        50% {
+          box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+          transform: translatey(-20px);
+        }
+
+        100% {
+          box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+          transform: translatey(0px);
+        }
+      }
+
+      @keyframes moveX {
+        to {
+          transform: translateX(var(--translate, 35px));
+        }
+      }
+
+      @keyframes moveY {
+        to {
+          transform: translateY(var(--translate, -35px));
+        }
+      }
+    }
+  }
+}

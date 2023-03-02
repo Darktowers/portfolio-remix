@@ -1,9 +1,17 @@
-import type { LinksFunction } from "@remix-run/node";
+import type { LinksFunction, MetaFunction } from "@remix-run/node";
 
-import styles from "~/styles/about/index.css";
+import styles from "~/styles/pages/about/index.css";
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: styles }];
+};
+
+export const meta: MetaFunction = () => {
+  return {
+    title: "About me",
+    description:
+      "I been working a lot with javascript technologies",
+  };
 };
 
 export default function About() {
