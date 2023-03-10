@@ -8,6 +8,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import Menu, { links as menuLinks } from "./components/menu";
+import { links as WorkCardLinks } from "./components/WorkCard";
 
 import styles from "./styles/root.css";
 
@@ -20,9 +21,10 @@ export const meta: MetaFunction = () => ({
 export const links: LinksFunction = () => {
   return [
     ...menuLinks(),
+    ...WorkCardLinks(),
     {
       rel: "stylesheet",
-      href: "https://fonts.googleapis.com/css?family=Roboto&display=swap",
+      href: "https://fonts.googleapis.com/css?family=Roboto:300,500,700&display=swap",
     },
     {
       rel: "stylesheet",

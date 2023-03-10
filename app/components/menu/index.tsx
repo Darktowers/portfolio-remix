@@ -20,7 +20,7 @@ const Menu: FC = () => {
           <i className="fa-solid fa-user-astronaut"></i>
           <span className="text">About</span>
         </NavLink>
-        <NavLink to="/experience" className="menu-main-item">
+        <NavLink to="/my-work" className="menu-main-item">
           <span className="menu-main-item-ani"></span>
           <i className="fa-solid fa-code"></i>
           <span className="text">My Work</span>

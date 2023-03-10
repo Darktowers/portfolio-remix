@@ -23,9 +23,9 @@ export default function About() {
             <div className="about-container-who-profile">
               <div className="profile">
                 <div className="about-container-who-profile-face">
-                  <img src="me.webp" alt="" />
+                  <img src="me.webp" alt="" width={400} height={400} />
                 </div>
-                <div className="social-media">
+                <div className="share-media">
                   <a
                     rel="noreferrer"
                     href="https://www.linkedin.com/in/cristian-andres-arrieta-gutierrez-74a496b5"
@@ -35,10 +35,10 @@ export default function About() {
                   </a>
                   <a
                     rel="noreferrer"
-                    href="https://www.linkedin.com/in/cristian-andres-arrieta-gutierrez-74a496b5/"
+                    href="https://github.com/Darktowers"
                     target="_blank"
                   >
-                    <i className="fa-brands fa-whatsapp" />
+                    <i className="fa-brands fa-github" />
                   </a>
                 </div>
               </div>
@@ -49,7 +49,7 @@ export default function About() {
                   <i className="fa-solid fa-heart" />
                 </h3>
                 <p>
-                  Software developer with more than +5 years of experience in
+                  Software developer with more than +6 years of experience in
                   web apps development. I'm a team player and I'm always
                   learning about new technologies and constantly improving my
                   skills in order to do my best in each project I'm part.

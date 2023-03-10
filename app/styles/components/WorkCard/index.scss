@@ -1,0 +1,140 @@
+@import "../../config/colors.scss";
+
+.workCard {
+    max-width: 400px;
+
+    &__realCard {
+        background: $card-background;
+        color: white;
+        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+        border-radius: 8px;
+        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+        min-height: 400px;
+        max-height: 400px;
+
+        &_open {
+            position: absolute;
+            top: -4em;
+            z-index: 2;
+            padding: 1em;
+            right: 0;
+            cursor: pointer;
+            transition: top .2s ease-in-out;
+
+            i {
+                color: white;
+                font-size: 2em;
+            }
+        }
+    }
+
+    &:hover {
+        .workCard {
+            &__realCard {
+                &_open {
+                    top: 0;
+                }
+            }
+
+            &__image {
+                &_container {
+                    img {
+                        transform: scale(1.1);
+                    }
+
+                    &::before {
+                        top: 0;
+                    }
+                }
+            }
+
+            &__content {
+                border-bottom: .5em solid $hyper-thunder;
+
+            }
+        }
+    }
+
+    &__image {
+        &_container {
+            position: relative;
+            width: 100%;
+            height: 225px;
+            overflow: hidden;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: rgba($hyper-green, 0.5);
+                top: -225px;
+                right: 0;
+                z-index: 1;
+                transition: top .2s ease-in-out;
+            }
+
+            img {
+                position: absolute;
+                width: 100%;
+                height: auto;
+                transform: scale(1);
+                transition: transform .3s ease-in-out;
+
+            }
+        }
+    }
+
+    &__content {
+        padding: 1.5em;
+        border-top: 2px solid $hyper-thunder;
+        border-bottom: .5em solid transparent;
+        transition: border-bottom .3s ease-in-out;
+
+        &_info {
+            margin-bottom: 1em;
+
+            h3,
+            p {
+                margin: 0;
+            }
+
+            h3 {
+                margin-bottom: 1em;
+                color: #01f8c1;
+                font-size: 18px;
+                letter-spacing: 2px;
+                font-weight: 500;
+            }
+
+            p {
+                font-weight: 300;
+                letter-spacing: 1px;
+            }
+        }
+
+
+    }
+
+    &__tags {
+        padding: 1em 0.3em;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: .5em;
+        row-gap: .3em;
+
+        div {
+            border-radius: 8px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: capitalize;
+            border: 1px solid $hyper-thunder;
+            padding: .5em 1em;
+            box-sizing: border-box;
+            color: white;
+            font-weight: 300;
+        }
+    }
+}

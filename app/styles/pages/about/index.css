@@ -57,7 +57,7 @@
     align-items: center;
   }
 }
-.about-container-who-profile .profile .social-media {
+.about-container-who-profile .profile .share-media {
   max-width: 200px;
   display: flex;
   align-items: center;
@@ -66,22 +66,22 @@
   margin-top: 1em;
 }
 @media screen and (max-width: 768px) {
-  .about-container-who-profile .profile .social-media {
+  .about-container-who-profile .profile .share-media {
     margin-bottom: 1em;
   }
 }
 @media screen and (max-width: 450px) {
-  .about-container-who-profile .profile .social-media {
+  .about-container-who-profile .profile .share-media {
     margin-bottom: 0;
     margin-top: 0;
   }
 }
-.about-container-who-profile .profile .social-media a {
+.about-container-who-profile .profile .share-media a {
   font-size: 1.5em;
   margin-right: 0.5em;
   color: #3ceefc;
 }
-.about-container-who-profile .profile .social-media a:last-child {
+.about-container-who-profile .profile .share-media a:last-child {
   margin-right: 0;
 }
 .about-container-who-profile-face {
@@ -97,7 +97,7 @@
   justify-content: center;
 }
 .about-container-who-profile-face img {
-  transform: translate(10px, 32px);
+  transform: translate(5px, 22px) scale(0.6);
 }
 .about-container-who-profile-content {
   width: 60%;

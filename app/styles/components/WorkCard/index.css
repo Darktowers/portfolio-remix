@@ -1,0 +1,115 @@
+@keyframes pulse {
+  from {
+    transform: scale(0.3);
+  }
+  to {
+    transform: scale(0.5);
+  }
+}
+.workCard {
+  max-width: 400px;
+}
+.workCard__realCard {
+  background: #1d1d1d;
+  color: white;
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  min-height: 400px;
+  max-height: 400px;
+}
+.workCard__realCard_open {
+  position: absolute;
+  top: -4em;
+  z-index: 2;
+  padding: 1em;
+  right: 0;
+  cursor: pointer;
+  transition: top 0.2s ease-in-out;
+}
+.workCard__realCard_open i {
+  color: white;
+  font-size: 2em;
+}
+.workCard:hover .workCard__realCard_open {
+  top: 0;
+}
+.workCard:hover .workCard__image_container img {
+  transform: scale(1.1);
+}
+.workCard:hover .workCard__image_container::before {
+  top: 0;
+}
+.workCard:hover .workCard__content {
+  border-bottom: 0.5em solid #3ceefc;
+}
+.workCard__image_container {
+  position: relative;
+  width: 100%;
+  height: 225px;
+  overflow: hidden;
+}
+.workCard__image_container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(1, 248, 193, 0.5);
+  top: -225px;
+  right: 0;
+  z-index: 1;
+  transition: top 0.2s ease-in-out;
+}
+.workCard__image_container img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+.workCard__content {
+  padding: 1.5em;
+  border-top: 2px solid #3ceefc;
+  border-bottom: 0.5em solid transparent;
+  transition: border-bottom 0.3s ease-in-out;
+}
+.workCard__content_info {
+  margin-bottom: 1em;
+}
+.workCard__content_info h3,
+.workCard__content_info p {
+  margin: 0;
+}
+.workCard__content_info h3 {
+  margin-bottom: 1em;
+  color: #01f8c1;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+.workCard__content_info p {
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.workCard__tags {
+  padding: 1em 0.3em;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.5em;
+  row-gap: 0.3em;
+}
+.workCard__tags div {
+  border-radius: 8px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  border: 1px solid #3ceefc;
+  padding: 0.5em 1em;
+  box-sizing: border-box;
+  color: white;
+  font-weight: 300;
+}
+
+/*# sourceMappingURL=index.css.map */

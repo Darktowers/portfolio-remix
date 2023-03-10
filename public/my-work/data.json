@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Z0E Financial",
+    "description": "Platform to find the best financial advisors to growth your wealth",
+    "stack": "NextJS,Turborepo,Typescript,ReactJS,NodeJS,AWS Lambda,Vercel",
+    "image": "/my-work/images/my.zoefin.com.png",
+    "url": "https://my.zoefin.com/"
+  },
+  {
+    "name": "Fauni",
+    "description": "ReactNative application to find and explore the diversity of animals inside of and ecological park",
+    "stack": "ReactNative,Expo,Typescript,Laravel",
+    "image": "/my-work/images/fauni.png"
+  },
+  {
+    "name": "Coca-Cola en tu hogar",
+    "description": "Innovation to deliver coke products in a different way",
+    "stack": "Angular,Typescript,GraphQL,NodeJS,AWS Lambda",
+    "image": "/my-work/images/clientes.coca-cola.com.png",
+    "url": "https://www.entuhogar.coca-cola.com.co/"
+  },
+  {
+    "name": "PractiLonch",
+    "description": "Innovation to deliver healthy kids meals with the possibility to add some coke products",
+    "stack": "Angular,Typescript,GraphQL,NodeJS,AWS Lambda",
+    "image": "/my-work/images/practilonch.com.png",
+    "url": "https://www.practilonch.com"
+  }
+]
