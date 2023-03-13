@@ -35,7 +35,7 @@ export default function Experience() {
   console.log("experience", experience);
 
   const getExperience = async () => {
-    const res = await fetch("/experience.json");
+    const res = await fetch("/experience/data.json");
     const data: ExperienceType[] = await res.json();
 
     setExperience(data);
